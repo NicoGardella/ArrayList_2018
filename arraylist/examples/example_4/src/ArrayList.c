@@ -230,7 +230,12 @@ int al_remove(ArrayList* this,int index)
 int al_clear(ArrayList* this)
 {
     int returnAux = -1;
-
+    if(this!=NULL)
+    {
+        al_deleteArrayList(this);
+        this = al_newArrayList();
+        returnAux=0;
+    }
     return returnAux;
 }
 
@@ -244,6 +249,11 @@ int al_clear(ArrayList* this)
 ArrayList* al_clone(ArrayList* this)
 {
     ArrayList* returnAux = NULL;
+    if(this!=NULL)
+    {
+        returnAux = al_newArrayList();
+        returnAux = this;
+    }
 
     return returnAux;
 }
@@ -261,7 +271,29 @@ ArrayList* al_clone(ArrayList* this)
 int al_push(ArrayList* this, int index, void* pElement)
 {
     int returnAux = -1;
+    int reSizeReturn = 0;
+    if(this!=NULL && pElement!=NULL && index<this->size && index>0)
+    {
 
+        if(!((this->size)<(this->reservedSize)))
+        {
+            reSizeReturn = resizeUp(this);
+        }
+        if(!reSizeReturn)
+        {
+            int i;
+            this->size++;
+            for(i=this->size;i>index;i--)
+            {
+                this->pElements[i]=this->pElements[i-1];
+            }
+            this->pElements[index]=pElement;
+            returnAux=0;
+        }
+    }
+    if(index<0)
+        returnAux=-1;
+printf("\n---Index:%d-size:%d - ret:%d--\n",index,this->size,returnAux);
     return returnAux;
 }
 
@@ -275,6 +307,19 @@ int al_push(ArrayList* this, int index, void* pElement)
 int al_indexOf(ArrayList* this, void* pElement)
 {
     int returnAux = -1;
+    int i = 0;
+    if(this!=NULL && pElement!=NULL)
+    {
+        returnAux = 0;
+        for(i==0;i<this->size;i++)
+        {
+            if(pElement==this->pElements[i])
+            {
+                returnAux=i;
+                break;
+            }
+        }
+    }
 
     return returnAux;
 }
@@ -288,6 +333,16 @@ int al_indexOf(ArrayList* this, void* pElement)
 int al_isEmpty(ArrayList* this)
 {
     int returnAux = -1;
+    if(this != NULL)
+    {
+        if(this->size)
+        {
+            returnAux=0;
+        }else
+        {
+            returnAux = 1;
+        }
+    }
 
     return returnAux;
 }
@@ -320,6 +375,14 @@ void* al_pop(ArrayList* this,int index)
 ArrayList* al_subList(ArrayList* this,int from,int to)
 {
     void* returnAux = NULL;
+    if(this!=NULL && from>=0 && to<this->size && from<to)
+    {
+        returnAux = al_newArrayList();
+        for(;from<to;from++)
+        {
+            al_add(returnAux,this->pElements[from]);
+        }
+    }
 
     return returnAux ;
 }
@@ -337,7 +400,19 @@ ArrayList* al_subList(ArrayList* this,int from,int to)
 int al_containsAll(ArrayList* this,ArrayList* this2)
 {
     int returnAux = -1;
-
+    if(this != NULL && this2 != NULL)
+    {
+        int i;
+        for(i=0;i<this2->size;i++)
+        {
+            returnAux = 1;
+            if(al_contains(this,this2->pElements[i])!=1)
+            {
+                returnAux = 0;
+                break;
+            }
+        }
+    }
     return returnAux;
 }
 
@@ -351,6 +426,27 @@ int al_containsAll(ArrayList* this,ArrayList* this2)
 int al_sort(ArrayList* this, int (*pFunc)(void* ,void*), int order)
 {
     int returnAux = -1;
+    if(this!=NULL && pFunc!=NULL && (order==1||order==0))
+    {
+        returnAux=0;
+        int i;
+        int flagSwap;
+        void* auxiliarEstructura;
+        do
+        {
+            flagSwap = 0;
+            for(i=0;i<this->size;i++)
+            {
+                if((pFunc(this->pElements[i],this->pElements[i+1]) > 0 && order) || (pFunc(this->pElements[i],this->pElements[i+1]) < 0 && !order))
+                {
+                    auxiliarEstructura = this->pElements[i];
+                    this->pElements[i] = this->pElements[i+1];
+                    this->pElements[i+1] = auxiliarEstructura;
+                    flagSwap = 1;
+                }
+            }
+        }while(flagSwap);
+    }
 
     return returnAux;
 }
