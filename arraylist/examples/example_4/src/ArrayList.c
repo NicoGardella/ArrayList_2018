@@ -205,6 +205,17 @@ int al_set(ArrayList* this, int index,void* pElement)
 int al_remove(ArrayList* this,int index)
 {
     int returnAux = -1;
+    if(this != NULL && index<this->size)
+    {
+        for(index;index<this->size;index++)
+        {
+            this->pElements[index]= this->pElements[index+1];
+
+        }
+        this->size--;
+        returnAux = 0;
+
+    }
 
     return returnAux;
 }
