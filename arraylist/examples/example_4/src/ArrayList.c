@@ -186,6 +186,11 @@ int al_contains(ArrayList* this, void* pElement)
 int al_set(ArrayList* this, int index,void* pElement)
 {
     int returnAux = -1;
+    if(this != NULL && pElement != NULL && index<this->size)
+    {
+        this->pElements[index]= pElement;
+        returnAux = 0;
+    }
 
     return returnAux;
 }
