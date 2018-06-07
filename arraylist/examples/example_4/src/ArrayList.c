@@ -422,21 +422,22 @@ int al_sort(ArrayList* this, int (*pFunc)(void*,void*), int order)
         int i;
         int flagSwap;
         void* auxiliarEstructura;
-        do
-        {
-            flagSwap = 0;
-            for(i=0; i<this->size; i++)
+            do
             {
-                if((pFunc(this->pElements[i],this->pElements[i+1]) > 0 && order) || (pFunc(this->pElements[i],this->pElements[i+1]) < 0 && !order))
+                flagSwap = 0;
+                for(i=0; i<this->size-1; i++)
                 {
-                    auxiliarEstructura = this->pElements[i];
-                    this->pElements[i] = this->pElements[i+1];
-                    this->pElements[i+1] = auxiliarEstructura;
-                    flagSwap = 1;
+                    if((pFunc(this->pElements[i],this->pElements[i+1]) > 0 && order) || (pFunc(this->pElements[i],this->pElements[i+1]) < 0 && !order))
+                    {
+                        auxiliarEstructura = this->pElements[i];
+                        this->pElements[i] = this->pElements[i+1];
+                        this->pElements[i+1] = auxiliarEstructura;
+                        flagSwap = 1;
+                    }
+                    returnAux=0;
                 }
             }
-        }
-        while(flagSwap);
+            while(flagSwap);
     }
     return returnAux;
 }
@@ -509,9 +510,9 @@ int contract(ArrayList* this,int index)
     {
         int i;
         for(i=index; i>this->size; i++)
-            {
-                this->pElements[i]=this->pElements[i+1];
-            }
+        {
+            this->pElements[i]=this->pElements[i+1];
+        }
     }
     return returnAux;
 }
