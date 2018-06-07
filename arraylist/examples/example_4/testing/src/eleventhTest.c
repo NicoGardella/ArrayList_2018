@@ -88,9 +88,6 @@ void eleventhTestCase02(void)
         pAuxGet[i] = list->get(list,i);
         utest_assertNotNullMsg(pAuxGet[i],"Error in return value <get> if ok the correct value to return is not NULL");
     }
-
-
-
     for (i=0;i < LENGTH;i++)
     {
         utest_assertEqualsIntMsg(((Employee*)pAuxGet[i])->id,id[i],"Error value in <.id>");
@@ -110,6 +107,7 @@ void eleventhTestCase02(void)
 
 }
 
+
 void eleventhTestCase03(void)
 {
     int i, r;
@@ -128,7 +126,7 @@ void eleventhTestCase03(void)
 
     pAuxToPush = newEmployee(id[5],unsortedList[5],unsortedList[5],salary[5],sector[5]);
 
-    r = list->set(list,i,NULL);
+    r = list->push(list,i,NULL);
     utest_assertEqualsIntMsg(r,-1,"Error in return value <push> if the pointer to the Element is NULL the correct value to return is -1");
 
 
@@ -156,7 +154,7 @@ void eleventhTestCase04(void)
 
     pAuxToPush = newEmployee(id[5],unsortedList[5],unsortedList[5],salary[5],sector[5]);
 
-    r = list->set(NULL,i,pAuxToPush);
+    r = list->push(NULL,i,pAuxToPush);
     utest_assertEqualsIntMsg(r,-1,"Error in return value <push> if the pointer to array is NULL the correct value to return is -1");
 
 
@@ -184,7 +182,7 @@ void eleventhTestCase05(void)
 
     pAuxToPush = newEmployee(id[5],unsortedList[5],unsortedList[5],salary[5],sector[5]);
 
-    r = list->set(list,-1,pAuxToPush);
+    r = list->push(list,-1,pAuxToPush);
     utest_assertEqualsIntMsg(r,-1,"Error in return value <push> if the index is invalid (< 0) the correct value to return is -1");
 
 
