@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_layout_file>
+	<ActiveTarget name="Debug" />
+	<File name="ArrayList.c" open="1" top="0" tabpos="5">
+		<Cursor position="0" topLine="81" />
+	</File>
+	<File name="ArrayList.h" open="1" top="0" tabpos="2">
+		<Cursor position="0" topLine="15" />
+	</File>
+	<File name="Destinatario.c" open="1" top="0" tabpos="7">
+		<Cursor position="229" topLine="0" />
+	</File>
+	<File name="main.c" open="1" top="0" tabpos="1">
+		<Cursor position="1417" topLine="0" />
+	</File>
+	<File name="parser.c" open="1" top="0" tabpos="3">
+		<Cursor position="160" topLine="3" />
+	</File>
+	<File name="parser.h" open="1" top="0" tabpos="4">
+		<Cursor position="69" topLine="0" />
+	</File>
+</CodeBlocks_layout_file>

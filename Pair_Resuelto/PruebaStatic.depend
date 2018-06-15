@@ -1,0 +1,131 @@
+# depslib dependency file v1.0
+1463488858 source:k:\pruebastatic\main.c
+	<stdio.h>
+	<stdlib.h>
+	"ArrayList.h"
+
+1528419211 .h"
+
+1463488500 k:\pruebastatic\arraylist.h
+
+1463505889 source:/home/mauro/Descargas/ARRAY_LIB/LINUX_64/main.c
+	<stdio.h>
+	<stdlib.h>
+	"ArrayList.h"
+	"Employee.h"
+
+1527729036 h"
+
+1463505431 /home/mauro/Descargas/ARRAY_LIB/LINUX_64/ArrayList.h
+
+1463505760 source:/home/mauro/Descargas/ARRAY_LIB/LINUX_64/Employee.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"Employee.h"
+
+1463505789 /home/mauro/Descargas/ARRAY_LIB/LINUX_64/Employee.h
+
+1464384445 source:c:\users\profesor\desktop\example4_static_lib\win_64\employee.c
+	<stdio.h>
+	<stdlib.h>
+	"ArrayList.h"
+	"Employee.h"
+
+1463604778 c:\users\profesor\desktop\example4_static_lib\win_64\arraylist.h
+
+1464384298 c:\users\profesor\desktop\example4_static_lib\win_64\employee.h
+
+1464384349 source:c:\users\profesor\desktop\example4_static_lib\win_64\main.c
+	<stdio.h>
+	<stdlib.h>
+	"ArrayList.h"
+	"Employee.h"
+
+1464384471 source:c:\users\profesor\desktop\example4_static_lib\win_64\parser.c
+	<stdio.h>
+	<stdlib.h>
+	"ArrayList.h"
+	"Employee.h"
+
+1527729410 source:c:\users\alumno\desktop\pair\main.c
+	<stdio.h>
+	<stdlib.h>
+	"ArrayList.h"
+	"Employee.h"
+
+1527717732 c:\users\alumno\desktop\pair\arraylist.h
+
+1527729429 c:\users\alumno\desktop\pair\employee.h
+
+1527729034 source:c:\users\alumno\desktop\pair\parser.c
+	<stdio.h>
+	<stdlib.h>
+	"ArrayList.h"
+	"Employee.h"
+
+1527729410 source:c:\users\alumno\desktop\pair\employee.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"ArrayList.h"
+	"Employee.h"
+
+1527729668 source:c:\users\alumno\downloads\pair_resuelto\employee.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"ArrayList.h"
+	"Employee.h"
+
+1527717734 c:\users\alumno\downloads\pair_resuelto\arraylist.h
+
+1527729430 c:\users\alumno\downloads\pair_resuelto\employee.h
+
+1528420290 source:c:\users\alumno\downloads\pair_resuelto\main.c
+	<stdio.h>
+	<stdlib.h>
+	"ArrayList.h"
+	"Employee.h"
+
+1527729036 source:c:\users\alumno\downloads\pair_resuelto\parser.c
+	<stdio.h>
+	<stdlib.h>
+	"ArrayList.h"
+	"Employee.h"
+
+1528419211 source:c:\users\alumno\downloads\pair_resuelto\arraylist.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"ArrayList.h"
+
+1529023265 source:/home/alumno/Descargas/TP_3_Cascara22/Pair_Resuelto/ArrayList.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"ArrayList.h"
+
+1527717734 /home/alumno/Descargas/TP_3_Cascara22/Pair_Resuelto/ArrayList.h
+
+1529022912 source:/home/alumno/Descargas/TP_3_Cascara22/Pair_Resuelto/Destinatario.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"ArrayList.h"
+	"Destinatario.h"
+
+1529022752 /home/alumno/Descargas/TP_3_Cascara22/Pair_Resuelto/Destinatario.h
+
+1529023311 source:/home/alumno/Descargas/TP_3_Cascara22/Pair_Resuelto/main.c
+	<stdio.h>
+	<stdlib.h>
+	"ArrayList.h"
+	"Destinatario.h"
+
+1529018546 source:/home/alumno/Descargas/TP_3_Cascara22/Pair_Resuelto/parser.c
+	<stdio.h>
+	<stdlib.h>
+	"ArrayList.h"
+	"Destinatario.h"
+
