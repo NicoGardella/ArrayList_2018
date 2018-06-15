@@ -2,19 +2,22 @@
 <CodeBlocks_layout_file>
 	<ActiveTarget name="Debug" />
 	<File name="ArrayList.c" open="1" top="0" tabpos="5">
-		<Cursor position="0" topLine="81" />
+		<Cursor position="8068" topLine="304" />
 	</File>
 	<File name="ArrayList.h" open="1" top="0" tabpos="2">
-		<Cursor position="0" topLine="15" />
+		<Cursor position="4850" topLine="184" />
 	</File>
-	<File name="Destinatario.c" open="1" top="0" tabpos="7">
-		<Cursor position="229" topLine="0" />
+	<File name="Destinatario.c" open="1" top="0" tabpos="6">
+		<Cursor position="2234" topLine="114" />
 	</File>
-	<File name="main.c" open="1" top="0" tabpos="1">
-		<Cursor position="1417" topLine="0" />
+	<File name="Destinatario.h" open="1" top="0" tabpos="7">
+		<Cursor position="839" topLine="18" />
+	</File>
+	<File name="main.c" open="1" top="1" tabpos="1">
+		<Cursor position="2374" topLine="60" />
 	</File>
 	<File name="parser.c" open="1" top="0" tabpos="3">
-		<Cursor position="160" topLine="3" />
+		<Cursor position="612" topLine="5" />
 	</File>
 	<File name="parser.h" open="1" top="0" tabpos="4">
 		<Cursor position="69" topLine="0" />

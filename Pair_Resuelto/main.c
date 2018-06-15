@@ -34,23 +34,46 @@ int main()
                 parserLista("black_list.csv",listaNegra,"r");
                 break;
             case 3:
+                //ELIMINO DUPLICADOS
+                for(i=0; i < al_len(listaDestinatarios);i++)
+                {
+                        do{
+                        indice=-1;
+                        indice =al_indexOfFuncion(listaDestinatarios, al_get(listaDestinatarios,i+1),comparoDest);
+                        if(indice!=-1)
+                        {
+                            al_remove(listaDestinatarios,indice);
+                        }
+                        }while(indice=!-1);
+
+                }
+
                 for(i=0; i < al_len(listaNegra);i++)
                 {
-                    do
-                    {
+
                         indice=-1;
                         indice =al_indexOfFuncion(listaDestinatarios, al_get(listaNegra,i),comparoDest);
                         if(indice!=-1)
                         {
                             al_remove(listaDestinatarios,indice);
                         }
-                    }while(indice!=-1);
 
                 }
                 break;
             case 4:
-                 printf("\n----Destinatarios final----\n");
+                 printf("\n----Destinatarios final ----\n");
+                for(i=0; i < al_len(listaDestinatarios);i++)
+                {
+                        do{
+                        indice=-1;
+                        indice =al_indexOfFuncion(listaDestinatarios, al_get(listaDestinatarios,i+1),comparoDest);
+                        if(indice!=-1)
+                        {
+                            al_remove(listaDestinatarios,indice);
+                        }
+                        }while(indice=!-1);
 
+                }
                 for(i=0; i < al_len(listaDestinatarios);i++)
                 {
                     auxiliarDestinatario = al_get(listaDestinatarios,i);
